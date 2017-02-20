@@ -37,7 +37,12 @@ String readTime(){
   DateTime currentDateTime;
   String  dateTime;
   currentDateTime = Clock.read();
-  dateTime = currentDateTime.Hour + currentDateTime.Minute + currentDateTime.Second;
+  dateTime =  String(currentDateTime.Hour)
+              + ',' + String(currentDateTime.Minute)
+              + ',' + String(currentDateTime.Second)
+              + ',' + String(currentDateTime.Day)
+              + ',' + String(currentDateTime.Month)
+              + ',' + String(currentDateTime.Year);
   return dateTime;
 }
 
